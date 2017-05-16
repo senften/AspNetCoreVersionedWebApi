@@ -8,7 +8,7 @@ The guide to this project can be found on my website:
 
 ```powershell
 Install-Package Microsoft.AspNetCore.Mvc.Versioning
-Install-Package Swashbuckle.AspNetCore -Pre
+Install-Package Swashbuckle.AspNetCore
 Install-Package SwashbuckleAspNetVersioningShim -Pre
 ```
 
