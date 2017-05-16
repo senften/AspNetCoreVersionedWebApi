@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using System.Xml.XPath;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ApplicationParts;
+using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using SwashbuckleAspNetVersioningShim;
@@ -20,6 +22,7 @@ namespace VersionedWebApi
 		{
 			// Add framework services.
 			var mvcBuilder = services.AddMvc();
+            services.AddMvcCore().AddVersionedApiExplorer();
 
 			// Adds versioning capabilities, defaulting to version 1.0 calls if available
 			services.AddApiVersioning(o =>
@@ -31,12 +34,13 @@ namespace VersionedWebApi
 			// Add generated documentation
 			services.AddSwaggerGen(c =>
 			{
-				SwaggerVersioner.ConfigureSwaggerGen(c, mvcBuilder.PartManager);
+                var provider = services.BuildServiceProvider().GetRequiredService<IApiVersionDescriptionProvider>();
+				SwaggerVersioner.ConfigureSwaggerVersions(c, provider);
 			});
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-		public void Configure(IApplicationBuilder app, ApplicationPartManager partManager)
+		public void Configure(IApplicationBuilder app, ApplicationPartManager partManager, IApiVersionDescriptionProvider provider)
 		{
 			// Generate swagger.json
 			app.UseSwagger();
@@ -44,7 +48,7 @@ namespace VersionedWebApi
 			// Let's enable SwaggerUI
 			app.UseSwaggerUI(c =>
 			{
-				SwaggerVersioner.ConfigureSwaggerUI(c, partManager);
+				SwaggerVersioner.ConfigureSwaggerVersions(c, provider);
 			});
 
 			app.UseMvc();
