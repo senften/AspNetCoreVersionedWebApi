@@ -52,6 +52,9 @@ namespace VersionedWebApi
 			});
 
 			app.UseMvc();
+            // This is new for v1.1 and is a behavioral breaking change from previous (including 1.1-beta)
+            // See the release notes: https://github.com/Microsoft/aspnet-api-versioning/releases/tag/v1.1-rc1
+            app.UseApiVersioning();
 		}
 	}
 }
