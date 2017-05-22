@@ -1,5 +1,7 @@
 # AspNetCoreVersionedWebApi
 
+[![Build status](https://ci.appveyor.com/api/projects/status/9i3n48g9b8jdqdju?svg=true)](https://ci.appveyor.com/project/PaddoSwam/aspnetcoreversionedwebapi)
+
 A demonstration how to create a versioned and documented Web API project with .NET Core using.
 
 The guide to this project can be found on my website:
