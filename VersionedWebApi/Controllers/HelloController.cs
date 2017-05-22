@@ -5,8 +5,8 @@ namespace VersionedWebApi.Controllers
 	/// <summary>
 	/// HelloController, just saying Hello World!
 	/// </summary>
-	[ApiVersion("1.0", Deprecated = true), Route("api/v{version:apiVersion}/[controller]")]
-	public class HelloController : Controller
+	[ApiVersion("1.0", Deprecated = true), Route("api/v{api-version:apiVersion}/[controller]")]
+    public class HelloController : Controller
 	{
 		/// <summary>
 		/// Default Get call returning Hello World!
