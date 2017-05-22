@@ -6,7 +6,8 @@ namespace VersionedWebApi.Controllers.v2
 	/// <summary>
 	/// The modern HelloController, all up to date responses
 	/// </summary>
-	[ApiVersion("2.0"), Route("api/v{api-version:apiVersion}/[controller]")]
+	[ApiVersion("2.0")]
+    [Route("api/v{api-version:apiVersion}/[controller]")]
 	public class HelloController : Controller
 	{
 		/// <summary>
