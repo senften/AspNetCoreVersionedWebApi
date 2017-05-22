@@ -27,7 +27,7 @@ namespace VersionedWebApi.Controllers.v2
 			};
 		}
 	}
-	
+
 	/// <summary>
 	/// HelloWorldModel class for HelloController
 	/// </summary>
