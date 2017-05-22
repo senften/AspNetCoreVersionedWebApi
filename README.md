@@ -10,8 +10,10 @@ The guide to this project can be found on my website:
 
 ```powershell
 dotnet restore
-cd VersionedWebApi; dotnet run
+dotnet run --project VersionedWebApi\\VersionedWebApi.csproj
 ```
+
+Visit http://localhost:5000/api/v1/hello and http://localhost:5000/api/v2/hello for the demonstration.
 
 **NuGet:** [www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Versioning](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Versioning)
 
