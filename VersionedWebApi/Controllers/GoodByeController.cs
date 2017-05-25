@@ -7,6 +7,7 @@ namespace VersionedWebApi.Controllers
 	/// GoodByeController, just saying Goodbye!
 	/// </summary>
 	[ApiVersion("1.0", Deprecated = true)]
+	[ApiVersion("3.0")]
     [Route("api/v{api-version:apiVersion}/[controller]")]
     public class GoodByeController : Controller
 	{

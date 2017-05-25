@@ -5,8 +5,7 @@
     <Authors>Tom Hofman</Authors>
     <Company />
     <Description>A .NET Core Web API project demonstrating versioning a Web API and generating interactive documentation with Swagger.</Description>
-    <PackageProjectUrl>https://tomhofman.nl/lets-create-versioned-documented-asp-net-core-web-api/</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/PaddoSwam/AspNetCoreVersionedWebApi</RepositoryUrl>
+    <RepositoryUrl>https://github.com/senften/AspNetCoreVersionedWebApi</RepositoryUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
