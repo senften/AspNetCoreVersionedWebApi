@@ -15,7 +15,8 @@ namespace VersionedWebApi.Controllers
 		/// Default Get call returning Goodbye world!
 		/// </summary>
 		/// <returns></returns>
-		[HttpGet]
+		//[HttpGet]
+		[HttpGet, MapToApiVersion("1.0")]
         [ProducesResponseType(typeof(GoodByeWorldModel), 200)]
         [ProducesResponseType(typeof(void), 404)]
 		public GoodByeWorldModel Get()
