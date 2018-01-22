@@ -1,5 +1,7 @@
 # AspNetCoreVersionedWebApi
 
+[![Build status](https://ci.appveyor.com/api/projects/status/9i3n48g9b8jdqdju?svg=true)](https://ci.appveyor.com/project/PaddoSwam/aspnetcoreversionedwebapi)
+
 A demonstration how to create a versioned and documented Web API project with .NET Core using.
 
 The guide to this project can be found on my website:
@@ -8,8 +10,10 @@ The guide to this project can be found on my website:
 
 ```powershell
 dotnet restore
-cd VersionedWebApi; dotnet run
+dotnet run --project VersionedWebApi\\VersionedWebApi.csproj
 ```
+
+Visit http://localhost:5000/api/v1/hello and http://localhost:5000/api/v2/hello for the demonstration.
 
 **NuGet:** [www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Versioning](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Versioning)
 
